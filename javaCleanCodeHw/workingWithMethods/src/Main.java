@@ -62,7 +62,7 @@ public class Main {
 		
 		private void validateFirstNameIfEmpty(Customer customer) throws Exception {
 
-			if ((customer.getFirstName().trim().isEmpty() || customer.getFirstName() == null)){
+			if (customer.getFirstName() == null || customer.getFirstName().trim().isEmpty()){
 
 				throw new Exception("Customer's first name is empty.");
 
@@ -71,7 +71,7 @@ public class Main {
 
 		private void validateLastNameIfEmpty(Customer customer) throws Exception {
 
-			if (customer.getLastName().trim().isEmpty() || customer.getLastName() == null) {
+			if (customer.getLastName() == null || customer.getLastName().trim().isEmpty()) {
 
 				throw new Exception("Customer's last name is empty.");
 
@@ -80,7 +80,7 @@ public class Main {
 
 		private void validateIdentityNumberIfEmpty(Customer customer) throws Exception {
 
-			if (customer.getIdentityNumber().trim().isEmpty() || customer.getIdentityNumber() == null) {
+			if (customer.getIdentityNumber() == null || customer.getIdentityNumber().trim().isEmpty()) {
 
 				throw new Exception("Customer's identity number is empty.");
 
